@@ -1,0 +1,66 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/haddocking/arctic3d:
+      branch: main
+      repo: https://github.com/haddocking/arctic3d
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/haddocking/arctic3d git:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-fuchsia-reindeer.sh
+        container: qc.acc_gummy-fuchsia-bandicoot
+  QC.Doc:
+    repos:
+      github.com/haddocking/arctic3d find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-wisteria-paradise.sh
+        container: qc.doc_tasty-auburn-hyrax
+      github.com/haddocking/arctic3d git:
+        commands:
+        - /usr/bin/env sh .sqa/script.skanky-black-ocelot.sh
+        container: qc.doc_sleepy-lime-tapir
+      github.com/haddocking/arctic3d markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-copper-dodo.sh
+        container: qc.doc_gamy-olivine-zorse
+      github.com/haddocking/arctic3d restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-brown-tetra.sh
+        container: qc.doc_droopy-razzmatazz-shark
+  QC.Lic:
+    repos:
+      github.com/haddocking/arctic3d licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-periwinkle-wolverine.sh
+        container: qc.lic_tasty-purple-bordeaux
+  QC.Sec:
+    repos:
+      github.com/haddocking/arctic3d bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-ivory-rhinoceros.sh
+        container: qc.sec_cloudy-cyan-zebra
+  QC.Sty:
+    repos:
+      github.com/haddocking/arctic3d flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-coral-eagle.sh
+        container: qc.sty_shabby-maroon-balinese
+      github.com/haddocking/arctic3d jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-gamboge-akbash.sh
+        container: qc.sty_foggy-emerald-bird
+  QC.Ver:
+    repos:
+      github.com/haddocking/arctic3d get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-beige-markhor.sh
+        container: qc.ver_zippy-gamboge-manatee
+timeout: 5400

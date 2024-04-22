@@ -15,68 +15,68 @@ sqa_criteria:
     repos:
       github.com/haddocking/arctic3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-scarlet-loon.sh
-        container: qc.acc_crappy-scarlet-anteater
+        - /usr/bin/env sh .sqa/script.skanky-celadon-eleuth.sh
+        container: qc.acc_goopy-lilac-beaver
   QC.Doc:
     repos:
       github.com/haddocking/arctic3d find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-maroon-alligator.sh
-        container: qc.doc_messy-orange-angora
+        - /usr/bin/env sh .sqa/script.squeaky-jade-owl.sh
+        container: qc.doc_wheezy-russet-havanese
       github.com/haddocking/arctic3d git:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-cinnabar-orangutan.sh
-        container: qc.doc_bluesy-cyan-barnacle
+        - /usr/bin/env sh .sqa/script.frumpy-periwinkle-ladybird.sh
+        container: qc.doc_beady-aquamarine-dhole
       github.com/haddocking/arctic3d markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-cardinal-bat.sh
-        container: qc.doc_bumpy-saffron-jackal
+        - /usr/bin/env sh .sqa/script.hasty-orange-dollar.sh
+        container: qc.doc_wimpy-crimson-kakapo
       github.com/haddocking/arctic3d restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-tomato-zebu.sh
-        container: qc.doc_surly-buff-monkey
+        - /usr/bin/env sh .sqa/script.squirrely-lemon-sponge.sh
+        container: qc.doc_cozy-rose-foxhound
   QC.Lic:
     repos:
       github.com/haddocking/arctic3d licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-saffron-tiger.sh
-        container: qc.lic_lovely-indigo-reindeer
+        - /usr/bin/env sh .sqa/script.wimpy-flax-dragonfly.sh
+        container: qc.lic_lovely-zucchini-hedgehog
   QC.Met:
     repos:
       github.com/haddocking/arctic3d cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-sepia-cougar.sh
-        container: qc.met_flabby-vermilion-donkey
+        - /usr/bin/env sh .sqa/script.baggy-cerulean-grouse.sh
+        container: qc.met_pasty-azure-hamster
   QC.Sec:
     repos:
       github.com/haddocking/arctic3d bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-violet-insect.sh
-        container: qc.sec_snoopy-gold-cattle
+        - /usr/bin/env sh .sqa/script.lumpy-xanthic-goose.sh
+        container: qc.sec_queasy-rust-mongrel
   QC.Sty:
     repos:
       github.com/haddocking/arctic3d flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-mauve-bulldog.sh
-        container: qc.sty_pokey-pink-chimpanzee
+        - /usr/bin/env sh .sqa/script.cheeky-sapphire-wolf.sh
+        container: qc.sty_ready-dandelion-macaque
       github.com/haddocking/arctic3d hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-indigo-baboon.sh
-        container: qc.sty_snippy-aquamarine-bird
+        - /usr/bin/env sh .sqa/script.shaky-brown-saola.sh
+        container: qc.sty_shaggy-purple-fousek
       github.com/haddocking/arctic3d jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-tan-indri.sh
-        container: qc.sty_nerdy-cinnabar-orangutan
+        - /usr/bin/env sh .sqa/script.wiggy-brown-cow.sh
+        container: qc.sty_thirsty-pink-lion
   QC.Uni:
     repos:
       github.com/haddocking/arctic3d pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-sangria-affenpinscher.sh
-        container: qc.uni_queasy-cerise-turkey
+        - /usr/bin/env sh .sqa/script.wimpy-magnolia-fox.sh
+        container: qc.uni_snippy-seashell-hummingbird
   QC.Ver:
     repos:
       github.com/haddocking/arctic3d get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-plum-alligator.sh
-        container: qc.ver_stinky-turquoise-quoll
+        - /usr/bin/env sh .sqa/script.lovely-eggplant-budgerigar.sh
+        container: qc.ver_clammy-celadon-crane
 timeout: 5400
